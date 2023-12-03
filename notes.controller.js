@@ -23,15 +23,9 @@ async function deleteNote(id) {
   const notes = await getNotes();
   //   console.log(id);
   //   console.log(notes);
-  if (notes.find((note) => note.id === id)) {
-    const newNotes = notes.filter((note) => note.id !== id);
-    //   console.log(newNotes);
-
-    await fs.writeFile(notesPath, JSON.stringify(newNotes));
-    console.log(chalk.red(`Note by id: ${id} was deleted!`));
-  } else {
-    console.log(chalk.red(`Note by id: ${id} not found`));
-  }
+  const newNotes = notes.filter((note) => note.id !== id);
+  await fs.writeFile(notesPath, JSON.stringify(newNotes));
+  console.log(chalk.red(`Note by id: ${id} was deleted!`));
 }
 
 async function getNotes() {
@@ -52,4 +46,5 @@ module.exports = {
   addNote,
   printNotes,
   deleteNote,
+  getNotes,
 };
