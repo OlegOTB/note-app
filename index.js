@@ -3,7 +3,12 @@ const express = require("express");
 // const fs = require("fs/promises");
 const chalk = require("chalk");
 const path = require("path");
-const { addNote, deleteNote, getNotes } = require("./notes.controller");
+const {
+  updateNote,
+  addNote,
+  deleteNote,
+  getNotes,
+} = require("./notes.controller");
 
 const port = 3000;
 
@@ -53,8 +58,7 @@ app.put("/", async (req, res) => {
   const tmpBody = req.body;
   console.log(tmpBody);
   if (tmpBody) {
-    await deleteNote(tmpBody.id);
-    await addNote(tmpBody.newName);
+    await updateNote(tmpBody.id, tmpBody.newName);
   }
   res.render("index", {
     title: "Express App",

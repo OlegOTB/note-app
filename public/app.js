@@ -9,7 +9,7 @@ document.addEventListener("click", (event) => {
         liById.firstChild.textContent.trim()
       );
       if (newName && !newName !== "") {
-        add(id, newName).then((response) => {
+        update(id, newName).then((response) => {
           if (response.ok) {
             liById.firstChild.textContent = newName.trim();
           }
@@ -29,7 +29,7 @@ document.addEventListener("click", (event) => {
 async function remove(id) {
   await fetch(`/${id}`, { method: "DELETE" });
 }
-function add(id, newName) {
+function update(id, newName) {
   return fetch("/", {
     method: "PUT",
     body: JSON.stringify({ id: id, newName: newName }),

@@ -34,6 +34,14 @@ async function getNotes() {
   return Array.isArray(JSON.parse(notes)) ? JSON.parse(notes) : [];
 }
 
+async function updateNote(id, title) {
+  const notes = await getNotes();
+  const index = notes.findIndex((note) => note.id === id);
+  notes[index].title = title;
+  await fs.writeFile(notesPath, JSON.stringify(notes));
+  console.log(chalk.blue(`Note by id: ${id} updated!`));
+}
+
 async function printNotes() {
   const notes = await getNotes();
   console.log(chalk.blue("Here is the list of notes:"));
@@ -43,6 +51,7 @@ async function printNotes() {
 }
 
 module.exports = {
+  updateNote,
   addNote,
   printNotes,
   deleteNote,
