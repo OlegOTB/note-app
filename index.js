@@ -2,7 +2,11 @@
 const express = require("express");
 // const fs = require("fs/promises");
 const chalk = require("chalk");
+const mongoose = require("mongoose");
+const Note = require("./models/Note")
 const path = require("path");
+const dbConfig = require("./config/db.config");
+
 const {
   updateNote,
   addNote,
@@ -26,21 +30,32 @@ app.get("/", async (req, res) => {
     title: "Express App",
     notes: await getNotes(),
     created: false,
+    error: false
   });
   // res.sendFile(path.join(basePath, "index.html"));
 });
 app.post("/", async (req, res) => {
   // console.log(req.body.inputText);
   console.log(chalk.magenta("POST"));
+try {  
   if (req.body.inputText !== undefined && req.body.inputText !== "") {
-    await addNote(req.body.inputText);
-    res.render("index", {
-      title: "Express App",
-      notes: await getNotes(),
-      created: true,
-    });
-  }
-  // res.sendFile(path.join(basePath, "index.html"));
+  await addNote(req.body.inputText);
+  res.render("index", {
+    title: "Express App",
+    notes: await getNotes(),
+    created: true,
+    error: false
+  });
+}
+} catch (error) {
+  console.error("Creation error", error)
+  res.render("index", {
+    title: "Express App",
+    notes: await getNotes(),
+    created: false,
+    error: true
+  });
+}  // res.sendFile(path.join(basePath, "index.html"));
 });
 app.delete("/:id", async (req, res) => {
   console.log(chalk.magenta("DELETE"));
@@ -50,6 +65,7 @@ app.delete("/:id", async (req, res) => {
     title: "Express App",
     notes: await getNotes(),
     created: false,
+    error: false
   });
 });
 
@@ -64,9 +80,10 @@ app.put("/", async (req, res) => {
     title: "Express App",
     notes: await getNotes(),
     created: false,
+    error: false
   });
 });
 
-app.listen(port, () => {
+mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`).then(()=>{app.listen(port, () => {
   console.log(chalk.blue(`Server has been started on port ${port}...`));
-});
+})})     ;
