@@ -1,6 +1,10 @@
 const yargs = require("yargs");
 const pkg = require("./package.json");
 const { updateNote, addNote, printNotes, deleteNote } = require("./notes.controller");
+const mongoose = require("mongoose");
+const dbConfig = require("./config/db.config");
+
+mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`);
 
 yargs.version(pkg.version);
 

@@ -22,7 +22,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "pages");
 app.use(express.static(path.resolve(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.get("/", async (req, res) => {
   console.log(chalk.magenta("GET"));
@@ -86,4 +86,4 @@ app.put("/", async (req, res) => {
 
 mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`).then(()=>{app.listen(port, () => {
   console.log(chalk.blue(`Server has been started on port ${port}...`));
-})})     ;
+})});
