@@ -1,7 +1,7 @@
 // const fs = require("fs/promises");
 // const path = require("path");
 const chalk = require("chalk");
-const Note = require("./models/Note")
+const Note = require("./models/Note");
 
 // const notesPath = path.join(__dirname, "db.json");
 
@@ -9,7 +9,7 @@ async function addNote(title) {
   //   const notes = require(notesPath);
   //   const notes = await fs.readFile(notesPath, { encoding: "utf-8" });
   //   const notes = Buffer.from(buffer).toString("utf-8");
-await Note.create({title})
+  await Note.create({ title });
   // const notes = await getNotes();
   // const note = {
   //   title,
@@ -22,7 +22,7 @@ await Note.create({title})
 
 async function deleteNote(id) {
   // const notes = await getNotes();
-await Note.deleteOne({_id:id});
+  await Note.deleteOne({ _id: id });
   //   console.log(id);
   //   console.log(notes);
   // const newNotes = notes.filter((note) => note.id !== id);
@@ -30,10 +30,15 @@ await Note.deleteOne({_id:id});
   console.log(chalk.red(`Note by id: ${id} was deleted!`));
 }
 
+async function getNoteById(id) {
+  const notes = await Note.findById(id);
+  return notes;
+}
+
 async function getNotes() {
   //   return require(notesPath);
   // const notes = await fs.readFile(notesPath, { encoding: "utf-8" });
-  const notes = await Note.find()
+  const notes = await Note.find();
   // return Array.isArray(JSON.parse(notes)) ? JSON.parse(notes) : [];
   return notes;
 }
@@ -43,7 +48,7 @@ async function updateNote(id, title) {
   // const index = notes.findIndex((note) => note.id === id);
   // notes[index].title = title;
   // await fs.writeFile(notesPath, JSON.stringify(notes));
-  await Note.updateOne({_id:id},{title: title})
+  await Note.updateOne({ _id: id }, { title: title });
   console.log(chalk.blue(`Note by id: ${id} updated!`));
 }
 
@@ -61,4 +66,5 @@ module.exports = {
   printNotes,
   deleteNote,
   getNotes,
+  getNoteById,
 };

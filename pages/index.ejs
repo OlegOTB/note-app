@@ -14,10 +14,9 @@
   <body>
     <%if(created){%>
     <div class="alert alert-success">"Note has been created!"</div>
+    <%}%> <%if(error){%>
+    <div class="alert alert-danger">"Somthing went wrong... "</div>
     <%}%>
-    <%if(error){%>
-      <div class="alert alert-danger">"Somthing went wrong... "</div>
-      <%}%>
     <div class="container">
       <h1><%=title%></h1>
       <form action="/" method="post" class="mb-2">
@@ -33,14 +32,44 @@
               class="list-group-item d-flex justify-content-between align-items-center"
               id="<%=notes[i].id%>"
             >
-              <%= notes[i].title%>
-              <div>
+              <input
+                type="text"
+                id="inputTitle"
+                name="inputTitle"
+                disabled
+                value="<%= notes[i].title%>"
+                style="border: none; background-color: white; color: black"
+              />
+              <input
+                type="text"
+                id="oldInputTitle"
+                name="oldInputTitle"
+                value=""
+                style="display: none"
+              />
+              <div id="editTitle" data-type="editTitle" style="display: none">
+                <button
+                  class="btn btn-primary"
+                  data-type="save"
+                  data-id="<%=notes[i].id%>"
+                >
+                  Сохранить
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-type="cancel"
+                  data-id="<%=notes[i].id%>"
+                >
+                  Отменить
+                </button>
+              </div>
+              <div id="viewTitle" data-type="viewTitle" style="display: block">
                 <button
                   class="btn btn-primary"
                   data-type="edit"
                   data-id="<%=notes[i].id%>"
                 >
-                  Редактировать
+                  Обновить
                 </button>
                 <button
                   class="btn btn-danger"
