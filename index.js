@@ -88,7 +88,7 @@ app.put("/", async (req, res) => {
 
 async function initDataTest() {
   const notes = await getNotes();
-  if (notes) {
+  if (notes.length > 0) {
     let maxTestDataVersion = Math.max(
       ...notes.map((data) => data.testDataVersion)
     );
@@ -100,9 +100,9 @@ async function initDataTest() {
 
 mongoose
   .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`)
-  .then(() => {
+  .then(async () => {
     app.listen(port, () => {
       console.log(chalk.blue(`Server has been started on port ${port}...`));
     });
-    // initDataTest();
+    await initDataTest();
   });

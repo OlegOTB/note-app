@@ -2,17 +2,16 @@ const mongoose = require("mongoose");
 
 const noteSchema = mongoose.Schema({
   testDataVersion: String,
-  testTitle: String,
+  title: String,
+  chesk:
+    Number /* 0 - тест не открывался; number - кол-во верных ответов в % от общего кол-ва ответов*/,
   quastionsList: [
     {
-      id: String,
       num: String,
       title: String,
-      quastAnsChesk:
+      chesk:
         Number /*-1 - дан неверный ответ; 0 - не было ответа; 1 - дан верный ответ*/,
-      answer: [
-        { ansId: String, ansNum: String, ansTitle: String, anschesk: Boolean },
-      ],
+      answer: [{ num: String, title: String, chesk: Boolean }],
     },
   ],
 });
