@@ -13,6 +13,7 @@ const {
   addNote,
   deleteNote,
   getNotes,
+  addTest,
 } = require("./notes.controller");
 
 const port = 3000;
@@ -85,8 +86,16 @@ app.put("/", async (req, res) => {
   });
 });
 
-function initDataTest() {
-  // initData;
+async function initDataTest() {
+  const notes = await getNotes();
+  if (notes) {
+    let maxTestDataVersion = Math.max(
+      ...notes.map((data) => data.testDataVersion)
+    );
+    return notes.find((item) => item.testDataVersion === maxTestDataVersion);
+  } else {
+    await addTest(initData);
+  }
 }
 
 mongoose
@@ -95,5 +104,5 @@ mongoose
     app.listen(port, () => {
       console.log(chalk.blue(`Server has been started on port ${port}...`));
     });
-    initDataTest();
+    // initDataTest();
   });

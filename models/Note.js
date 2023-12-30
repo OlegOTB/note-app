@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const noteSchema = mongoose.Schema({
-  testId: String,
   testDataVersion: String,
   testTitle: String,
   quastionsList: [

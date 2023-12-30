@@ -5,6 +5,11 @@ const Note = require("./models/Note");
 
 // const notesPath = path.join(__dirname, "db.json");
 
+async function addTest(test) {
+  await Note.create(test);
+  console.log(chalk.green("Test was added!"));
+}
+
 async function addNote(title) {
   //   const notes = require(notesPath);
   //   const notes = await fs.readFile(notesPath, { encoding: "utf-8" });
@@ -67,4 +72,5 @@ module.exports = {
   deleteNote,
   getNotes,
   getNoteById,
+  addTest,
 };
