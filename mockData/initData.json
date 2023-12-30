@@ -1,0 +1,563 @@
+{
+  "testId": "1",
+  "testDataVersion": "11111111111",
+  "testTitle": "Тест на эрудицию: 20 увлекательных вопросов из разных областей знаний",
+  "quastionsList": [
+    {
+      "id": "1",
+      "num": "1",
+      "title": "Какая из птиц умеет летать задом наперёд",
+      "quastAnsChesk": "0",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Воробей",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Ласточка",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Киви",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Колибри",
+          "anschesk": "true"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "num": "2",
+      "title": "Какого животного боялся Уолт Дисней, который до 1947 года лично озвучивал Микки Мауса",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Мышей",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Кошек",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Собак",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "num": "3",
+      "title": "С цветовой гаммой на картинах какого художника сравнил Юрий Гагарин увиденные им цвета горизонта при своём первом полёте в космос",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Сальвадор Дали",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Николай Рерих",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Иван Айвазовский",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Винсент ван Гог",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "num": "4",
+      "title": "Имя кого из героев киносаги Звёздные войны произошло от русского слова",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Чубакка",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Йода",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Палпатин",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Уотто",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "num": "5",
+      "title": "Какое животное стало одним из главных героев романа братьев Вайнеров Евангелие от палача",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Лиса",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Ястреб",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Ягуана",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Мангуст",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "5",
+          "ansNum": "5",
+          "ansTitle": "Кобра",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "num": "6",
+      "title": "От какого португальского, либо испанского слова (в переводе на русский) происходит название государства Барбадос и одноимённого острова, на котором оно расположено",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "бородатые",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "альбатрос",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "камень",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "num": "7",
+      "title": "Каким животным разрешён вход в мусульманскую мечеть",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Собакам",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Коровам",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Скунсам",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Кошкам",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "5",
+          "ansNum": "5",
+          "ansTitle": "Хорькам",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "num": "8",
+      "title": "Представителем какой политической партии являлся американский президент Джордж Вашингтон",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Демократы",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Республиканцы",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Никакой",
+          "anschesk": "true"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "num": "9",
+      "title": "Как называется государство, которое расположено сразу в четырёх полушариях Земли",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Кирибати",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Вануату",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Тувалу",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "num": "10",
+      "title": "Какая из спортивных игр возникла в Шотландии в начале XVI века",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Футбол",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Кёрлинг",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Бадминтон",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "num": "11",
+      "title": "Какой океан ранее назывался Гиперборейским",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Тихий океан",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Индийский океан",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Северный Ледовитый океан",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "Атлантический океан",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "num": "12",
+      "title": "Спутником какой планеты является Харон",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Юпитер",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Плутон",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Венера",
+          "anschesk": "false"
+        },
+        { "ansId": "4", "ansNum": "4", "ansTitle": "Марс", "anschesk": "false" }
+      ]
+    },
+    {
+      "id": "13",
+      "num": "13",
+      "title": "Супругой какого русского царя была Марфа Васильевна Собакина, пробывшая ею всего 15 дней",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Иван Грозный",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Пётр I",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Великий Михаил Фёдорович",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "num": "14",
+      "title": "Махабхарата — это ... ",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "священное писание индуизма",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "древнеиндийский трактат",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "религиозно-философского и нравоучительного характера древнеиндийский эпос",
+          "anschesk": "true"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "num": "15",
+      "title": "В качестве чего задумывали использовать шпиль знаменитого нью-йоркского небоскрёба Эмпайр-стейт-билдинг его создатели",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "В качестве причальной мачты для дирижаблей",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "В качестве телевизионной башни",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "В качестве огромного громоотвода",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "num": "16",
+      "title": "Над территорией бассейна какой реки пролетел знаменитый Тунгусский метеорит",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Днепра",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Волги",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Енисея",
+          "anschesk": "true"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "num": "17",
+      "title": "Что означает бинди — точка, которую индийские женщины рисуют в центре лба",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Что женщина замужем",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Что женщина является невестой",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Что женщина ждёт своего первенца",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "num": "18",
+      "title": "Для ухода за чем изначально предназначалось косметическое средство, получившее название помада",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "За губами",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "За зубами",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "За волосами",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "4",
+          "ansNum": "4",
+          "ansTitle": "За ногтями",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "num": "19",
+      "title": "Много ли людей выживает после удара молнии",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Большинство",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Менее половины",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Практически никто",
+          "anschesk": "false"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "num": "20",
+      "title": "Сколько ножек у бабочки",
+      "answer": [
+        {
+          "ansId": "1",
+          "ansNum": "1",
+          "ansTitle": "Четыре",
+          "anschesk": "false"
+        },
+        {
+          "ansId": "2",
+          "ansNum": "2",
+          "ansTitle": "Шесть",
+          "anschesk": "true"
+        },
+        {
+          "ansId": "3",
+          "ansNum": "3",
+          "ansTitle": "Восемь",
+          "anschesk": "false"
+        }
+      ]
+    }
+  ]
+}
