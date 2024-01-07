@@ -13,10 +13,13 @@ const {
   addNote,
   deleteNote,
   getNotes,
-  addTest,
+  getNoteById,
 } = require("./notes.controller");
 
 const port = 3000;
+let idTest;
+let maxNum;
+let version;
 
 // const basePath = path.join(__dirname, "pages");
 
@@ -26,76 +29,98 @@ app.set("views", "pages");
 app.use(express.static(path.resolve(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.get("/test", async (req, res) => {
+  console.log(chalk.magenta("GET"));
+  res.render("testPage", {
+    title: "Тест ver." + version,
+    idTest: idTest,
+  });
+});
+
+app.get("/test/result", async (req, res) => {
+  console.log(chalk.magenta("GET"));
+  res.render("resultPage", {
+    title: "Результат прохождения теста ver." + version,
+    idTest: idTest,
+  });
+});
+
+app.get("/test/edit", async (req, res) => {
+  console.log(chalk.magenta("GET"));
+  res.render("editPage", {
+    title: "Тест ver." + version,
+    idTest: idTest,
+  });
+});
+
+app.get("/test/:id", async (req, res) => {
+  console.log(chalk.magenta("GET"));
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(JSON.stringify(await getNoteById(req.params.id)));
+});
+app.get("/test/edit/:id", async (req, res) => {
+  console.log(chalk.magenta("GET"));
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(JSON.stringify(await getNoteById(req.params.id)));
+});
 app.get("/", async (req, res) => {
   console.log(chalk.magenta("GET"));
-  res.render("index", {
-    title: "Express App",
-    notes: await getNotes(),
-    created: false,
-    error: false,
+  res.render("mainPage", {
+    title: "Тест ver." + version,
   });
   // res.sendFile(path.join(basePath, "index.html"));
 });
-app.post("/", async (req, res) => {
+app.post("/test/edit", async (req, res) => {
   // console.log(req.body.inputText);
   console.log(chalk.magenta("POST"));
   try {
     if (req.body.inputText !== undefined && req.body.inputText !== "") {
       await addNote(req.body.inputText);
-      res.render("index", {
-        title: "Express App",
-        notes: await getNotes(),
-        created: true,
-        error: false,
+      res.render("editPage", {
+        test: await getNoteById(idTest),
       });
     }
   } catch (error) {
     console.error("Creation error", error);
-    res.render("index", {
-      title: "Express App",
-      notes: await getNotes(),
-      created: false,
-      error: true,
+    res.render("editPage", {
+      test: await getNoteById(idTest),
     });
   } // res.sendFile(path.join(basePath, "index.html"));
 });
-app.delete("/:id", async (req, res) => {
+app.delete("/test/edit", async (req, res) => {
   console.log(chalk.magenta("DELETE"));
   await deleteNote(req.params.id);
   // console.log(await getNotes());
-  res.render("index", {
-    title: "Express App",
-    notes: await getNotes(),
-    created: false,
-    error: false,
+  res.render("editPage", {
+    test: await getNoteById(idTest),
   });
 });
 
-app.put("/", async (req, res) => {
+app.put("/test/edit", async (req, res) => {
   console.log(chalk.magenta("PUT"));
   const tmpBody = req.body;
   console.log(tmpBody);
   if (tmpBody) {
     await updateNote(tmpBody.id, tmpBody.newName);
   }
-  res.render("index", {
-    title: "Express App",
-    notes: await getNotes(),
-    created: false,
-    error: false,
+  res.render("editPage", {
+    test: await getNoteById(idTest),
   });
 });
 
 async function initDataTest() {
-  const notes = await getNotes();
+  const notes = await Note.find({}, { num: 1 });
+  let buff;
   if (notes.length > 0) {
-    let maxTestDataVersion = Math.max(
-      ...notes.map((data) => data.testDataVersion)
-    );
-    return notes.find((item) => item.testDataVersion === maxTestDataVersion);
+    maxNum = Math.max(...notes.map((data) => data.num));
   } else {
-    await addTest(initData);
+    await addNote(initData, [], "test");
+    maxNum = initData.num;
   }
+  buff = await Note.findOne({ num: maxNum }, { id: 1, version: 1 });
+  version = buff.version;
+  return buff.id;
 }
 
 mongoose
@@ -104,5 +129,5 @@ mongoose
     app.listen(port, () => {
       console.log(chalk.blue(`Server has been started on port ${port}...`));
     });
-    await initDataTest();
+    idTest = await initDataTest();
   });

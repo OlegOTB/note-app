@@ -1,491 +1,471 @@
 {
-  "testDataVersion": "1703959175177",
+  "num": "1703959175177",
+  "version": "5/1/2024-9.47.15",
   "title": "Тест на эрудицию: 20 увлекательных вопросов из разных областей знаний",
-  "chesk": 0,
   "quastionsList": [
     {
       "num": "1",
       "title": "Какая из птиц умеет летать задом наперёд",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Воробей",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Ласточка",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Киви",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "4",
           "title": "Колибри",
-          "chesk": "true"
+          "chesk": 1
         }
       ]
     },
     {
       "num": "2",
       "title": "Какого животного боялся Уолт Дисней, который до 1947 года лично озвучивал Микки Мауса",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Мышей",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Кошек",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Собак",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "3",
       "title": "С цветовой гаммой на картинах какого художника сравнил Юрий Гагарин увиденные им цвета горизонта при своём первом полёте в космос",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Сальвадор Дали",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Николай Рерих",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "3",
           "title": "Иван Айвазовский",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "4",
           "title": "Винсент ван Гог",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "4",
       "title": "Имя кого из героев киносаги Звёздные войны произошло от русского слова",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Чубакка",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Йода",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Палпатин",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "4",
           "title": "Уотто",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "5",
       "title": "Какое животное стало одним из главных героев романа братьев Вайнеров Евангелие от палача",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Лиса",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Ястреб",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Ягуана",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "4",
           "title": "Мангуст",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "5",
           "title": "Кобра",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "6",
       "title": "От какого португальского, либо испанского слова (в переводе на русский) происходит название государства Барбадос и одноимённого острова, на котором оно расположено",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "бородатые",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "альбатрос",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "камень",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "7",
       "title": "Каким животным разрешён вход в мусульманскую мечеть",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Собакам",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Коровам",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Скунсам",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "4",
           "title": "Кошкам",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "5",
           "title": "Хорькам",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "8",
       "title": "Представителем какой политической партии являлся американский президент Джордж Вашингтон",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Демократы",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Республиканцы",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Никакой",
-          "chesk": "true"
+          "chesk": 1
         }
       ]
     },
     {
       "num": "9",
       "title": "Как называется государство, которое расположено сразу в четырёх полушариях Земли",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Кирибати",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Вануату",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Тувалу",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "10",
       "title": "Какая из спортивных игр возникла в Шотландии в начале XVI века",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Футбол",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Кёрлинг",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "3",
           "title": "Бадминтон",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "11",
       "title": "Какой океан ранее назывался Гиперборейским",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Тихий океан",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Индийский океан",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Северный Ледовитый океан",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "4",
           "title": "Атлантический океан",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "12",
       "title": "Спутником какой планеты является Харон",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Юпитер",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Плутон",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "3",
           "title": "Венера",
-          "chesk": "false"
+          "chesk": 0
         },
-        { "ansId": "4", "num": "4", "title": "Марс", "chesk": "false" }
+        { "ansId": "4", "num": "4", "title": "Марс", "chesk": 0 }
       ]
     },
     {
       "num": "13",
       "title": "Супругой какого русского царя была Марфа Васильевна Собакина, пробывшая ею всего 15 дней",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Иван Грозный",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Пётр I",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Великий Михаил Фёдорович",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "14",
       "title": "Махабхарата — это ... ",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "священное писание индуизма",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "древнеиндийский трактат",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "религиозно-философского и нравоучительного характера древнеиндийский эпос",
-          "chesk": "true"
+          "chesk": 1
         }
       ]
     },
     {
       "num": "15",
       "title": "В качестве чего задумывали использовать шпиль знаменитого нью-йоркского небоскрёба Эмпайр-стейт-билдинг его создатели",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "В качестве причальной мачты для дирижаблей",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "В качестве телевизионной башни",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "В качестве огромного громоотвода",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "16",
       "title": "Над территорией бассейна какой реки пролетел знаменитый Тунгусский метеорит",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Днепра",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Волги",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Енисея",
-          "chesk": "true"
+          "chesk": 1
         }
       ]
     },
     {
       "num": "17",
       "title": "Что означает бинди — точка, которую индийские женщины рисуют в центре лба",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Что женщина замужем",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Что женщина является невестой",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Что женщина ждёт своего первенца",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "18",
       "title": "Для ухода за чем изначально предназначалось косметическое средство, получившее название помада",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "За губами",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "За зубами",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "За волосами",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "4",
           "title": "За ногтями",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "19",
       "title": "Много ли людей выживает после удара молнии",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Большинство",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "2",
           "title": "Менее половины",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "3",
           "title": "Практически никто",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     },
     {
       "num": "20",
       "title": "Сколько ножек у бабочки",
-      "chesk": 0,
       "answer": [
         {
           "num": "1",
           "title": "Четыре",
-          "chesk": "false"
+          "chesk": 0
         },
         {
           "num": "2",
           "title": "Шесть",
-          "chesk": "true"
+          "chesk": 1
         },
         {
           "num": "3",
           "title": "Восемь",
-          "chesk": "false"
+          "chesk": 0
         }
       ]
     }
