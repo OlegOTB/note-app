@@ -32,11 +32,11 @@ window.onload = function () {
     const newTag = document.createElement("li");
     newTag.className = "list-group-item";
     newTag.setAttribute("style", "white-space: pre;");
-    newTag.textContent = `Дата тестирования ${displayDate(
+    newTag.innerHTML = `Дата тестирования ${displayDate(
       el.dateTesting
-    )}\r\n Версия теста ${el.version}\r\n Всего вопросов ${
-      el.numQuastions
-    }\r\n Нет ответа ${
+    )}\r\n Версия теста ${el.version} <span style="color: red">${
+      Number(el.num) > el.dateTesting ? "*тест изменен после прохождения" : ""
+    }</span>\r\n Всего вопросов ${el.numQuastions}\r\n Нет ответа ${
       el.numQuastions - (el.trueAnswer + el.falseAnswer)
     }\r\n Правильных ответов ${el.trueAnswer}\r\n Неверных ответов ${
       el.falseAnswer

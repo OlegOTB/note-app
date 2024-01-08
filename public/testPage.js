@@ -66,6 +66,7 @@ document.addEventListener("click", (event) => {
 
       const resultTesting = {
         dateTesting: Date.now(),
+        num: test.num,
         version: test.version,
         numQuastions: allNumQuastion,
         trueAnswer: trueAnswer,

@@ -61,8 +61,16 @@ app.get("/test/:id", async (req, res) => {
 });
 app.get("/test/edit/:id", async (req, res) => {
   console.log(chalk.magenta("GET"));
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end(JSON.stringify(await getNoteById(req.params.id)));
+  if (req.params.id === "update") {
+    await initDataTest();
+    res.render("editPage", {
+      title: "Тест ver." + version,
+      idTest: idTest,
+    });
+  } else {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(JSON.stringify(await getNoteById(req.params.id)));
+  }
 });
 app.get("/", async (req, res) => {
   console.log(chalk.magenta("GET"));
@@ -74,39 +82,38 @@ app.get("/", async (req, res) => {
 app.post("/test/edit", async (req, res) => {
   // console.log(req.body.inputText);
   console.log(chalk.magenta("POST"));
+  const tmpBody = req.body;
+  // console.log(tmpBody);
   try {
-    if (req.body.inputText !== undefined && req.body.inputText !== "") {
-      await addNote(req.body.inputText);
-      res.render("editPage", {
-        test: await getNoteById(idTest),
-      });
+    for (let i = 0; i < tmpBody.length; i++) {
+      await addNote(tmpBody[i].title, tmpBody[i].idArr, tmpBody[i].typeRecord);
     }
   } catch (error) {
     console.error("Creation error", error);
-    res.render("editPage", {
-      test: await getNoteById(idTest),
-    });
-  } // res.sendFile(path.join(basePath, "index.html"));
+  }
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(JSON.stringify("Добавление записей прошло успешно"));
 });
 app.delete("/test/edit", async (req, res) => {
   console.log(chalk.magenta("DELETE"));
-  await deleteNote(req.params.id);
-  // console.log(await getNotes());
-  res.render("editPage", {
-    test: await getNoteById(idTest),
-  });
+  const tmpBody = req.body;
+  // console.log(tmpBody);
+  for (let i = 0; i < tmpBody.length; i++) {
+    await deleteNote(tmpBody[i].idArr, tmpBody[i].typeRecord);
+  }
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(JSON.stringify("Удаление записей прошло успешно"));
 });
 
 app.put("/test/edit", async (req, res) => {
   console.log(chalk.magenta("PUT"));
   const tmpBody = req.body;
-  console.log(tmpBody);
-  if (tmpBody) {
-    await updateNote(tmpBody.id, tmpBody.newName);
+  // console.log(tmpBody);
+  for (let i = 0; i < tmpBody.length; i++) {
+    await updateNote(tmpBody[i].title, tmpBody[i].idArr, tmpBody[i].typeRecord);
   }
-  res.render("editPage", {
-    test: await getNoteById(idTest),
-  });
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(JSON.stringify("Обновление записей прошло успешно"));
 });
 
 async function initDataTest() {
@@ -120,7 +127,7 @@ async function initDataTest() {
   }
   buff = await Note.findOne({ num: maxNum }, { id: 1, version: 1 });
   version = buff.version;
-  return buff.id;
+  idTest = buff.id;
 }
 
 mongoose
@@ -129,5 +136,5 @@ mongoose
     app.listen(port, () => {
       console.log(chalk.blue(`Server has been started on port ${port}...`));
     });
-    idTest = await initDataTest();
+    await initDataTest();
   });

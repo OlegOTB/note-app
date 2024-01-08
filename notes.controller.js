@@ -63,7 +63,7 @@ async function deleteNote(idArr, typeRecord) {
       const buff = await Note.findById(idArr[0]);
       await Note.deleteOne({ _id: idArr[0] });
       console.log(
-        chalk.red(`Тест версии от ${buff.version} удален из базы данных!`)
+        chalk.red(`Тест версии от ${buff?.version} удален из базы данных!`)
       );
       break;
     }
@@ -135,7 +135,10 @@ async function updateNote(title, idArr, typeRecord) {
   // await fs.writeFile(notesPath, JSON.stringify(notes));
   switch (typeRecord) {
     case "test": {
-      await Note.updateOne({ _id: idArr[0] }, { $set: { title: title.title } });
+      await Note.updateOne(
+        { _id: idArr[0] },
+        { $set: { num: title.num, title: title.title } }
+      );
       console.log(chalk.blue(`Название теста с id:${idArr[0]} обновлено!`));
       break;
     }
